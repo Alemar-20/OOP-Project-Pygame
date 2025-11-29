@@ -1,21 +1,29 @@
-SCREENWIDTH = 1280
-SCREENHEIGHT = 692
+#This is gamesetting.py - contains global settings for the Bomberman game
+
+SCREENWIDTH = 1343         #1343
+SCREENHEIGHT = 832
+
+
 
 # GAME FRAMES PER SECONDS
 FPS = 60
 
+# Y COORDINATE OFFSET FOR SPRITES
+Y_OFFSET = 92
+
+
 # ACTUAL SPRITE SIZE FROM YOUR SHEET
-SPRITE_WIDTH = 32.5   # Most common size for this style
-SPRITE_HEIGHT = 32.125
+SPRITE_WIDTH = 32   # Most common size for this style
+SPRITE_HEIGHT = 32
+
+# TILE SIZE FROM YOUR TILE SHEET
+TILE_WIDTH = 32
+TILE_HEIGHT = 32
 
 # GAME MATRIX 
 SIZE = 64  # SIZE OF EACH TILE IN PIXELS
-#SIZE = 32  # SIZE OF EACH TILE IN PIXELS
-# SIZE = 48  # SIZE OF EACH TILE IN PIXELS
-# SIZE = 96  # SIZE OF EACH TILE IN PIXELS
-ROWS = 12
-COLS = 30
-
+ROWS = 13
+COLS = 21
 
 
 # COLOURS
@@ -25,7 +33,7 @@ WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 YELLOW = (255, 255, 0)
-GREY = (128, 128, 128)
+GREY = (188, 188, 188)
 ORANGE = (255, 165, 0)
 PURPLE = (128, 0, 128)
 BROWN = (165, 42, 42)
@@ -35,25 +43,22 @@ LIGHTGREEN = (144, 238, 144)
 DARKGREY = (64, 64, 64)
 LIGHTGREY = (192, 192, 192)
 
-# SPRITE COORDINATES
-# PLAYER = {"walk_left":[(0,1),(0,0),(0,2)],
-#           "walk_down":[(0,4),(0,3),(0,5)],
-#           "walk_right":[(0,7),(0,6),(0,8)],
-#           "walk_up":[(0,10),(0,9),(0,11)],
-#           "dead_anim":[(1,0),(1,1),(1,2),(1,3),(1,4),(1,5),(1,6)]} 
-
+#COLOR PALLETE
+YELLOW_WHITE = (254,255,211)
+PITCH_RED = (219,76,76)
+YELLOWISH = (253, 228, 188)
+PURPLEISH = (95,107,210)
+DARK_RED = (97,25,19)
 
 # SPRITE COORDINATES
 
 PLAYER = {
     # Row 0: Walking
     "walk_down": [(0, 0), (0, 1), (0, 2)], 
-    #"walk_left": [(0, 1), (0, 0), (0, 2)],
     "walk_left": [(3, 0), (3, 1), (3, 2)],
-    #"walk_right": [(0, 7), (0, 6), (0, 8)],
     "walk_right": [(1, 0), (1, 1), (1, 2)],
     "walk_up": [(2, 0), (2, 1), (2, 2)],
-    
+
     # Row 2: Idling (Assuming these are the stand-still frames)
     "idle_down": [(2, 3)],
     "idle_left": [(2, 0)],
@@ -73,4 +78,7 @@ PLAYER = {
     "sleep_anim": [(5, 0), (5, 1), (5, 2), (5, 3), (5, 4)],
 }
 
-HARD_BLOCK = {"hard_block":[]}
+#HARD_BLOCK = {"hard_block":[(0,2)]}
+#HARD_BLOCK = {"hard_block":[(0,1)]} #before  [(0.2,1.2)]}
+HARD_BLOCK = {"hard_block":[(0,1)]}
+SOFT_BLOCK = {"soft_block":[(0,7)]} #block for purple soft block [(0,7]}
