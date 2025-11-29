@@ -1,3 +1,4 @@
+#This is character.py - defines the Character class for the Bomberman game
 import pygame
 import gamesetting as gs
 
@@ -12,7 +13,7 @@ class Character(pygame.sprite.Sprite):
 
         # CHARACTER ATTRIBUTES 
         self.alive = True
-        self.speed = 3
+        self.speed = 3          #default is 3
 
         # CHARACTER ACTION
         self.action = "walk_left"
@@ -78,9 +79,7 @@ class Character(pygame.sprite.Sprite):
         if action != self.action:
             self.action = action
             self.index = 0
-            # self.image = self.image_dict[self.action][self.index]
-            # self.anim_time_set = pygame.time.get_ticks()
-
+        # Define movement direction and speed    
         direction = {"walk_left": -self.speed, "walk_right": self.speed, "walk_up": -self.speed, "walk_down": self.speed}
 
         # Change the player x and y coords based on the action argument
